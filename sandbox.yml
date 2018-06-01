@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  gather_facts: no
+#  connection: local
+  roles: 
+    - common
+    - sandbox
+  tasks: 
+    - include: roles/sandbox/tasks/main.yml
